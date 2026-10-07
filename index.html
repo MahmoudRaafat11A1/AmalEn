@@ -165,6 +165,18 @@ input::placeholder{color:#6E5F4C;}
 .msg.ok{background:rgba(80,160,90,.15); border:1px solid #5EA76B; color:#9FD8AA;}
 .msg.err{background:rgba(190,70,70,.15); border:1px solid #C46A6A; color:#E8A5A5;}
 .err-f{border-color:#C46A6A !important;}
+textarea{width:100%; background:#120E09; border:1px solid rgba(201,164,92,.45); color:var(--cream); font-family:var(--sans); font-size:16px; padding:13px 16px; border-radius:8px; outline:none; transition:border-color .15s; resize:vertical; min-height:110px;}
+textarea:focus{border-color:var(--gold-b);}
+html[lang="ar"] textarea{font-size:17px;}
+/* --- Intro video in hero --- */
+.hero-video{width:min(240px,70%); margin:22px 0 4px;}
+.hero-video video{width:100%; display:block; border-radius:16px; border:1px solid rgba(201,164,105,.5); box-shadow:0 18px 50px rgba(0,0,0,.55); background:#000;}
+.hero-video .vcap{color:var(--gold); font-size:12.5px; letter-spacing:1.5px; text-transform:uppercase; text-align:center; margin-top:10px; font-weight:700;}
+@media(max-width:860px){.hero-video{margin-left:auto; margin-right:auto;}}
+/* --- Free sample lecture --- */
+.lect-box{position:relative; padding-top:56.25%; border-radius:14px; overflow:hidden; border:1px solid rgba(201,164,92,.4); background:#000; box-shadow:0 18px 50px rgba(0,0,0,.45);}
+.lect-box iframe{position:absolute; inset:0; width:100%; height:100%; border:0;}
+.lect-note{color:var(--soft); font-size:14.5px; margin-top:14px; text-align:center;}
 
 /* FOOTER */
 footer{padding:40px 0 90px; text-align:center; color:var(--dim); font-size:13px;}
@@ -192,6 +204,10 @@ footer .soc{color:var(--soft); margin-top:6px;}
     <img class="hero-logo" data-img="logo" alt="Amal Shawkat">
     <div class="hero-school">Couture School Egypt</div>
     <h1>The Professional<br><i>Soirée Dress</i><br>Design &amp; Execution Diploma</h1>
+    <div class="hero-video">
+      <video src="intro.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+      <div class="vcap">Course Introduction · 1 min</div>
+    </div>
     <p class="hero-sub">Learn to design and craft soirée gowns from zero to professional level, hands-on and to true haute couture standards, with designer Amal Shawkat.</p>
     <div class="badges">
       <span class="badge">50+ Training Hours</span>
@@ -290,6 +306,16 @@ footer .soc{color:var(--soft); margin-top:6px;}
   </div>
 </section>
 
+<section id="lecture" style="background:var(--card2);">
+  <div class="wrap">
+    <div class="kicker">Free Sample Lesson</div>
+    <h2>Watch a real lesson <i>from inside the course</i></h2>
+    <div class="goldrule"></div>
+    <div class="lect-box"><iframe src="https://www.youtube.com/embed/kznaq9RFGZE" title="Front pattern drafting – full lecture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+    <div class="lect-note">A complete 32-minute lecture by Amal Shawkat, explaining the front pattern step by step — a real sample of what you will learn in the diploma.</div>
+  </div>
+</section>
+
 <section style="padding-top:0;">
   <div class="wrap">
     <div class="gal">
@@ -342,10 +368,18 @@ footer .soc{color:var(--soft); margin-top:6px;}
       </select>
       <label for="f-city-en">City / area</label>
       <input type="text" id="f-city-en" name="city" placeholder="e.g. New Cairo">
+      <label for="f-att-en">Do you have any problem attending the course in person in First Settlement, New Cairo? *</label>
+      <select id="f-att-en" name="attendance" required>
+        <option value="" disabled selected>Choose an answer</option>
+        <option value="No problem attending in person">No — I can attend in person</option>
+        <option value="Has a problem attending in person">Yes — I have a problem attending</option>
+      </select>
+      <label for="f-why-en">If applications exceed the available seats and we must select, why should we choose you? *</label>
+      <textarea id="f-why-en" name="why" placeholder="Tell us in a few lines" required></textarea>
       <input type="hidden" name="lang" value="EN">
       <button class="btn submit-btn" type="submit" data-t="Confirm Registration" data-sending="Sending…" data-done="Registered">Confirm Registration</button>
       <div class="msg ok">Your details were received. We will contact you very soon.</div>
-      <div class="msg err">Something went wrong. Please try again, or contact us directly at 01551414470.</div>
+      <div class="msg err">Something went wrong. Please try again, or contact us directly at 01132043374.</div>
       <p class="form-note">Your data is safe and will only be used to contact you about the diploma.</p>
     </form>
   </div>
@@ -354,7 +388,7 @@ footer .soc{color:var(--soft); margin-top:6px;}
 <footer>
   <div class="wrap">
     <div>Call or WhatsApp for booking and inquiries</div>
-    <div class="phone">01551414470</div>
+    <div class="phone">01132043374</div>
     <div class="soc">@coutureschouleg · @_amal_shawkat</div>
     <div style="margin-top:10px;">Couture School Egypt · By Amal Shawkat</div>
   </div>
@@ -374,6 +408,10 @@ footer .soc{color:var(--soft); margin-top:6px;}
     <img class="hero-logo" data-img="logo" alt="Amal Shawkat">
     <div class="hero-school">Couture School Egypt</div>
     <h1>دبلومة تصميم وتنفيذ<br><i>فساتين السواريه</i> الاحترافية</h1>
+    <div class="hero-video">
+      <video src="intro.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+      <div class="vcap">مقدمة الكورس · دقيقة واحدة</div>
+    </div>
     <p class="hero-sub">تعلمي صناعة فساتين السواريه من الصفر وحتى الاحتراف، بمنهج عملي وفق أسس الكوتور، مع المصممة آمال شوكت.</p>
     <div class="badges">
       <span class="badge">٥٠+ ساعة تدريبية</span>
@@ -472,6 +510,16 @@ footer .soc{color:var(--soft); margin-top:6px;}
   </div>
 </section>
 
+<section id="lecture-ar" style="background:var(--card2);">
+  <div class="wrap">
+    <div class="kicker">محاضرة مجانية كاملة</div>
+    <h2>شاهدي درسًا حقيقيًا <i>من داخل الكورس</i></h2>
+    <div class="goldrule"></div>
+    <div class="lect-box"><iframe src="https://www.youtube.com/embed/kznaq9RFGZE" title="شرح الباترون الأمامي – محاضرة كاملة" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+    <div class="lect-note">محاضرة كاملة مدتها ٣٢ دقيقة مع آمال شوكت في شرح الباترون الأمامي خطوة بخطوة — عيّنة حقيقية مما ستتعلمينه في الدبلومة.</div>
+  </div>
+</section>
+
 <section style="padding-top:0;">
   <div class="wrap">
     <div class="gal">
@@ -524,10 +572,18 @@ footer .soc{color:var(--soft); margin-top:6px;}
       </select>
       <label for="f-city-ar">المحافظة / المنطقة</label>
       <input type="text" id="f-city-ar" name="city" placeholder="مثال: القاهرة الجديدة">
+      <label for="f-att-ar">هل لديكِ أي مانع من حضور الكورس حضوريًا في التجمع الأول بالقاهرة الجديدة؟ *</label>
+      <select id="f-att-ar" name="attendance" required>
+        <option value="" disabled selected>اختاري إجابة</option>
+        <option value="لا يوجد مانع من الحضور">لا — أستطيع الحضور</option>
+        <option value="يوجد مانع من الحضور">نعم — لديّ مانع</option>
+      </select>
+      <label for="f-why-ar">إذا زاد عدد المتقدمات عن المقاعد المتاحة واضطررنا للاختيار والتصفية، لماذا نختارك؟ *</label>
+      <textarea id="f-why-ar" name="why" placeholder="اكتبي إجابتك في سطور قليلة" required></textarea>
       <input type="hidden" name="lang" value="AR">
       <button class="btn submit-btn" type="submit" data-t="تأكيد التسجيل" data-sending="جارٍ الإرسال…" data-done="تم التسجيل">تأكيد التسجيل</button>
       <div class="msg ok">تم استلام بياناتك بنجاح. سنتواصل معكِ قريبًا جدًا.</div>
-      <div class="msg err">حدث خطأ أثناء الإرسال. حاولي مرة أخرى أو تواصلي معنا مباشرة على 01551414470.</div>
+      <div class="msg err">حدث خطأ أثناء الإرسال. حاولي مرة أخرى أو تواصلي معنا مباشرة على 01132043374.</div>
       <p class="form-note">بياناتك في أمان تام ولن تُستخدم إلا للتواصل بخصوص الدبلومة.</p>
     </form>
   </div>
@@ -536,7 +592,7 @@ footer .soc{color:var(--soft); margin-top:6px;}
 <footer>
   <div class="wrap">
     <div>للحجز والاستفسار، اتصال أو واتساب</div>
-    <div class="phone">01551414470</div>
+    <div class="phone">01132043374</div>
     <div class="soc">@coutureschouleg · @_amal_shawkat</div>
     <div style="margin-top:10px;">Couture School Egypt · بإشراف آمال شوكت</div>
   </div>
@@ -624,16 +680,22 @@ document.querySelectorAll('form.leadForm').forEach(function(form){
     e.preventDefault();
     var name = form.querySelector('input[name="name"]');
     var phone = form.querySelector('input[name="phone"]');
+    var att = form.querySelector('select[name="attendance"]');
+    var why = form.querySelector('textarea[name="why"]');
     var ok = form.querySelector('.msg.ok');
     var err = form.querySelector('.msg.err');
     var btn = form.querySelector('.submit-btn');
     ok.style.display='none'; err.style.display='none';
     name.classList.remove('err-f'); phone.classList.remove('err-f');
+    if(att) att.classList.remove('err-f');
+    if(why) why.classList.remove('err-f');
 
     var valid = true;
     if(name.value.trim().length < 3){ name.classList.add('err-f'); valid=false; }
     var p = phone.value.replace(/[\s\-()]/g,'');
     if(!/^(\+?2?01)[0-9]{9}$/.test(p)){ phone.classList.add('err-f'); valid=false; }
+    if(att && !att.value){ att.classList.add('err-f'); valid=false; }
+    if(why && why.value.trim().length < 10){ why.classList.add('err-f'); valid=false; }
     if(!valid) return;
 
     btn.disabled = true; btn.textContent = btn.getAttribute('data-sending');
